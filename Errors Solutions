@@ -1,0 +1,7 @@
+1. Linux Error “No such device” in call setsockopt when joining multicast group
+Solution: check where the loopback is running using ifconfig.
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+You need to use interface address as inet addr i.e. 127.0.0.1 
