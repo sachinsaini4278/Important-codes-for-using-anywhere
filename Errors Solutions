@@ -5,3 +5,11 @@ lo        Link encap:Local Loopback
           inet6 addr: ::1/128 Scope:Host
           UP LOOPBACK RUNNING  MTU:65536  Metric:1
 You need to use interface address as inet addr i.e. 127.0.0.1 
+
+2. Anyhow by running chmod you are getting :
+sudo: /etc/sudoers is world writable
+sudo: no valid sudoers sources found, quitting
+sudo: unable to initialize policy plugin
+
+Solution: If running wsl then open cmd and run-> wsl -u root
+After that run-> chmod 440 /etc/sudoers
