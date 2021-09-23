@@ -1,1 +1,2 @@
 1. Valgrind Meamory leak check(Linux): Valgrind --leak-check=yes ./application_name
+2. Give permission read write execute in a file to all its folders and files(linux): chmod -R 777 ./
