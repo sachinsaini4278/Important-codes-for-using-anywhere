@@ -1,0 +1,1 @@
+1. Valgrind Meamory leak check(Linux): Valgrind --leak-check=yes ./application_name
