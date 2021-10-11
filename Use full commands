@@ -1,2 +1,10 @@
 1. Valgrind Meamory leak check(Linux): Valgrind --leak-check=yes ./application_name
 2. Give permission read write execute in a file to all its folders and files(linux): chmod -R 777 ./
+3. Mannualy install boost on linux
+  tar boost_1_58_0.tar.gz
+  cd boost_1_58_0
+  ./bootstrap.sh
+  ./b2
+Note: First install gcc and g++ if not installed.  
+sudo apt install gcc
+sudo apt install g++
