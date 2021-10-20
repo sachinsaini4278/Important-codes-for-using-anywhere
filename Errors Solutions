@@ -13,3 +13,25 @@ sudo: unable to initialize policy plugin
 
 Solution: If running wsl then open cmd and run-> wsl -u root
 After that run-> chmod 440 /etc/sudoers
+
+3. Undefined referece error can be due to---
+Mixing C with C++, Symbols defined in C called from C++:
+C++ mangled names of functions and variables(Why: wiki). So the declaration of C functions in C++ becomes a bit tricky. And as the name of function/variable has changed in c++ file, The definition of function/variable will never be found hence linking error. Following is one example to do it in a proper way:
+Let’s say we have a Method named void C_Method() and we want to use it in C++ file. So the Declaration on C++ should look like
+extern “C” void C_Method()
+Adding extern “C” tells compiler that this method belongs to C and don’t mangle it. But Wait what if you want entire header file to use? In that case, you have to extern complete header file like:
+
+extern "C" {
+    #include "your_c_header.h"
+}
+
+Also, there is one more way to if your C library is your own you can directly do following in your header:
+//At the beginning of you header
+#ifdef __cplusplus
+extern "C" {
+#endif
+//and following at the end
+#ifdef __cplusplus
+}
+#endif
+
