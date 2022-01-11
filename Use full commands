@@ -8,3 +8,7 @@
 Note: First install gcc and g++ if not installed.  
 sudo apt install gcc
 sudo apt install g++
+
+4. Tcpdump command to check packets
+tcpdump -i any -vv host 239.50.50.22  and port 10822
+
