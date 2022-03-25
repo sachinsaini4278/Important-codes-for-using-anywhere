@@ -17,3 +17,6 @@ Step 1
 sudo apt-get update -y
 Step 2
 sudo apt-get install -y librabbitmq-dev
+
+6. To see working directory of a process having process ID(without dollar):
+pwdx $pid
