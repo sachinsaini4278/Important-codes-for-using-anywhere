@@ -33,6 +33,10 @@ extern "C" {
 //and following at the end
 #ifdef __cplusplus
 }
+
+4.  error LNK2001: unresolved external symbol "void __cdecl boost::throw_exception(class std::exception const &,struct boost::source_location const &)
+In Visual Studio 2019/22: Inside Properties -> C/C++ -> Code Genereation -> Enable C__ Exception -> Yes(/EHsc)
+
 #endif
 
 https://prafullkumar77.medium.com/undefined-reference-unresolved-external-symbol-errors-in-c-c-objective-c-and-ways-to-solve-avoid-2998869e8af7
