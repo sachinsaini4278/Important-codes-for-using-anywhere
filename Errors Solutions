@@ -60,3 +60,7 @@ extern "C" FILE * __cdecl __iob_func(void)
 {
 	return _iob;
 }
+
+6. LINK : fatal error LNK1104: cannot open file ‘libboost_date_time-vc142-mt-s-x32-1_70.lib’
+  Try to re-run .b2 boost install command in boost folder.
+	C:\boost_1_70_0>.\b2 --with-date_time link=static runtime-link=static
