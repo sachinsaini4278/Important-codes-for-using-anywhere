@@ -28,6 +28,25 @@ int daysBetweenDates(string date1, string date2)
 	// by 86400 to get the number of days
 	return abs(end - start) / 86400;
 }
+std::string getCurrentDate()
+{
+    time_t t = time(NULL);
+    tm* ltm = localtime(&t);
+    std::stringstream date;
+    date << ltm->tm_mday
+         << "-"
+         << 1 + ltm->tm_mon
+         << "-"
+         << 1900 + ltm->tm_year
+        //  << " "
+        //  << 1 + ltm->tm_hour
+        //  << ":"
+        //  << 1 + ltm->tm_min
+        //  << ":"
+        //  << 1 + ltm->tm_sec
+        ;
+    return date.str();    
+}
 
 // Driver code
 int main()
